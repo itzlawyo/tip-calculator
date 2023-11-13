@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <script defer src="/script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="billInput">
+            <input type="number" id="billAmount" name="billAmount">
+        </div>
+        <div class="tip_keys">
+            <button class="tip_key" id=".10">10%</button>
+            <button class="tip_key" id=".15">15%</button>
+            <button class="tip_key" id=".18">18%</button>
+            <button class="tip_key" id=".20">20%</button>
+        </div>
+        <div class="tip_key_custom_container">
+            <button class="tip_key--custom">Custom</button>
+        </div>
+        <div class="numPeopleContainer">
+            <input type="range" min="1" max="30" value="1" class="numPeopleSlider" id="numPeopleRange">
+        </div>
+        <div class="amountPerPerson_output">0 / person</div>
+    </div>
+</body>
+</html>
