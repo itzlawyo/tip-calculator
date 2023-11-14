@@ -5,26 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
     <script defer src="/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator">
-        <div class="billInput">
-            <input type="number" id="billAmount" name="billAmount">
-        </div>
-        <div class="tip_keys">
-            <button class="tip_key" id=".10">10%</button>
-            <button class="tip_key" id=".15">15%</button>
-            <button class="tip_key" id=".18">18%</button>
-            <button class="tip_key" id=".20">20%</button>
-        </div>
-        <div class="tip_key_custom_container">
-            <button class="tip_key--custom">Custom</button>
-        </div>
-        <div class="numPeopleContainer">
-            <input type="range" min="1" max="30" value="1" class="numPeopleSlider" id="numPeopleRange">
-        </div>
-        <div class="amountPerPerson_output">0 / person</div>
+    <div class="container">
+        <section>
+            <div class="title">
+                Tip Calculator
+            </div>
+        </section>
+        <section>
+            <div class="wrapper">
+                <span class="lbl">Bill Amount</span>
+                <div class="inputBox">
+                    <span>$</span>
+                    <input type="number" value="0.00" id="billAmount">
+                </div>
+            </div>
+            <div class="wrapper">
+                <span class="lbl">Tip</span>
+                <span id="tip-amount" class="val">$0</span>
+            </div>
+            <div class="wrapper">
+                <span class="lbl">Total Amount</span>
+                <span id="total-amount" class="val">$0</span>
+            </div>
+        </section>
+        <section>
+            <div class="wrapper">
+                    <button class="tip_key" id=".10">10%</button>
+                    <button class="tip_key" id=".15">15%</button>
+                    <button class="tip_key" id=".18">18%</button>
+                    <button class="tip_key" id=".20">20%</button>
+            <div class="wrapper">
+                <div class="customTitle" class="lbl">
+                    Custom Amount
+                </div>
+                <div class="inputBox">
+                    <input type="number" value="0" id="customTipValue">
+                    <span>%</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="wrapper">
+                <label for="numPeople" class="lbl">
+                    Number Of People
+                </label>
+                <span id="split-num" class="val">
+                    0
+                </span>
+            </div>
+            <input type="range" min="1" max="25" value="1" class="numPeopleSlider" id="numPeopleRange">
+        </section>
+        <section>
+            <div class="wrapper">
+                <span class="lbl">
+                    Total Per Person
+                </span>
+                <span id="total-per-person" class="amountPerPerson_output">
+                    $0
+                </span>
+            </div>
+        </section>
+        <section>
+            <div class="wrapper">
+                <button class="resetBtn">Reset</button>
+            </div>
+        </section>
     </div>
 </body>
 </html>
